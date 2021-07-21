@@ -7,3 +7,4 @@
 .sokoban_cache/
 dist/
 build/
+.vscode/
