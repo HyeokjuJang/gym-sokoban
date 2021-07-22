@@ -131,7 +131,7 @@ class BoxobanEnv(SokobanEnv):
             # print(self.selected_map)
             self.room_selected = True
         elif self.choice_room:
-            self.selected_map = ['##########', '##########', '##########', '##########', '###  #####', '### $ $.##', '## .$   ##', '## $ # @##', '## .  .  #', '##########']
+            self.selected_map = ['##########', '##########', '# ########', '#      #.#', '# $ $    #', '# .   $. #', '#   ##@###', '# $ .#####', '#    #####', '##########']
         
         if self.verbose:
             print('Selected Level from File "{}"'.format(source_file))
