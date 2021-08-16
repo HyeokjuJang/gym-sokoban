@@ -16,7 +16,7 @@ class BoxobanEnv(SokobanEnv):
 
     def __init__(self,
              max_steps=120,
-             difficulty='unfiltered', split='train', render_mode='tiny_rgb_array', fix_room = True):
+             difficulty='unfiltered', split='train', render_mode='tiny_rgb_array', fix_room = False):
         self.difficulty = difficulty
         self.split = split
         self.verbose = False
@@ -24,7 +24,7 @@ class BoxobanEnv(SokobanEnv):
         self.fix_room = fix_room
         self.room_selected = False
         self.selected_map = None
-        self.choice_room = True
+        self.choice_room = False
         super(BoxobanEnv, self).__init__(self.dim_room, max_steps, self.num_boxes, None)
         if render_mode == 'tiny_rgb_array':
             self.observation_space = Box(low=0, high=255, shape=(self.dim_room[0], self.dim_room[1], 3), dtype=np.uint8)
